@@ -8,6 +8,16 @@
 - ORDER BY has a default of ascending if you dont clarify which you want
 - For string values we use single apostrophies (City = 'London') but for numerical values we just use the numbers (Price=3)
 - OR vs AND: OR operator displays if *any* conditions are TRUE. AND operator displays if *all* conditions are TRUE
+- With the **INSERT INTO** operator, the ID value does not need to be passed in as it increments itself
+   -  It is possible to insert data in specific columns, it just adds a record with only the values in the columns you provided.
+   -  It is also possible to insert multiple records into a table at one time, just seperate with a coma
+   -       SYNTAX:
+           INSERT INTO table_name
+           VALUES (values1, values2,values3,...),
+           VALUES (values1, values2,values3,...),
+           VALUES (values1, values2,values3,...);
+- A **NULL** Value is a value that has been left black and has no value.
+  - We use the IS NULL or IS NOT NULL operators to test for NULL values
 ## SQL Commands
 - SELECT * FROM Customers: gets all the records in the Customers table
 - SELECT: Extracts daa in a database
@@ -59,4 +69,17 @@
 **NOT LESS THAN**: Return value not less than certain value
 -        SELECT * FROM Customers
           WHERE NOT CustomerID < 14;
-     
+**INSERT INTO**: used to insert new records into a table
+-     SYNTAX #1: Specify the columns and values to be added
+          INSERT INTO table_name (column1, column2,...)
+          VALUES (values1, values2,...);
+-      SYNTAX #2: When adding to every column Ensure the order follow the column order if not specifying the columns to add to.
+          INSERT INTO table_name
+           VALUES (values1, values2,values3,...)
+- A **NULL** Value is a value that has been left black and has no value.
+-            SYNTAX 1:
+                SELECT * FROM Customers
+                WHERE CustomerName IS NOT NULL;
+-            SYNTAX 2:
+                SELECT * FROM Customers
+                WHERE Country IS NULL;
