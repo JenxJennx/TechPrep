@@ -1,0 +1,30 @@
+fe0ffeeb is the address of a slot in memory
+The position of an element is called an index (ie 20 is at index 1)
+
+Arrays
+    Array ex: at movie theater with 3 of your friends, if one person comes after the movie starts all of you have to move and find a new spot with more space.
+    Downside of arrays: if you requests more space than you need intially and dont end up using the unfilled spaces, no one else can use it and it is a wasted spot (waste of storage)
+                : If you need to add more than initially requested and dont have the space you will have to move to a new space
+    Elements in arrays are numbered starting at 0 not 1 typically! 
+    Deletion: Remove element and all other elements have to move up
+    Arrays are fast at read because it Provides random access and can cache.
+
+Linked lists    
+    Each item stores the address of the next item in the list, in summary its a bunch of memory addresses linked to each other
+    Ease in adding items to linked lists because you can just add it anywhere in memory and store the address with the previous item.
+    If there is space in memory, then there is space for your linked list.
+    Provide sequential read access: read elements one by one.
+    Linked lists are great if you want to read all the items one at a time, you can read the item and follow the address to the next to the next item.
+    Comparitevely, arrays are great if you want to find/read random random elements because you can look up any element in your array instantly. 
+    With linked lists elements are not next to each other, so you cant instantly calculate the position of a random element in memory. You have to go from first element to get address of next and on and on till arriving at needed item.
+    It is easier to insert an element in the middle of a list than an array because with an array you have to move all the elements after the new spot but linked list just requires changing what the previous element points to
+    Pointer: a little bit of memory use to store the address of the next item in a linked list
+    Deletion: Change what the previous element points to (Easy)
+    Deletion will always work in linked list, but insertion can fail is you run out of space in memory
+    Run time of Arrays vs Linked list
+    ----------------------------------
+    ___________|_Arrays_|_Linked_List
+    _Reading___|__O(1)__|_____O(n)____
+    _Insertion_|__O(n)__|_____O(1)____   *Insertion and deletion in linked list
+    _Deletion__|__O(n)__|_____O(1)____     are only o(1) if element is instantly accessible*
+

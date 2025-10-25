@@ -1,19 +1,17 @@
-def binary_search(arr,item):
-    l = 0
-    h = len(arr)-1
-
-    while l <= h:
-        mid = l + h // 2
-        guess = arr[mid]
-        if guess == item:
-            return mid
-        elif guess > item: #guess greater than item, ignore current mid and values greater and lower mid by 1
-            h = mid - 1
-        else: #Guess is less than needed item, ignore current mid and values less than it by increasing mid
-            l = mid + 1
-        return None #Item doesnt exist
-    my_list = [1,2,3,4,5,6,7,8,9,10]
-    print(binary_search(my_list, 7))   
-    print(binary_search(my_list, 3))
-    print(binary_search(my_list, 28))
-         
+     ##Binary search is an algorithm used to sort throguh a list of *SORTED* items in logarithmic time.
+     #Binary search returns a the position of the item if found, otherwise returns None or -1 or null
+     #Unlike linear search(simple or stupid search) that search through the list one item at a time O(n),
+     #binary search divide the list and compares the value of the midpoint to the target value and eliminates half of the list at a time O(log2(n)).
+     #Eliminate half the numers every time with binary search
+     #Binary search only works on sorted lists/arrays     
+     #Binary search runs in logarithmic time O(log n), it splits the amount of time in half with each search 
+     #Simple search is easier to write and there is less bugs introduced, but binary seaerch is more efficient
+     #As the list gets larger, comparitevely binary search run time stays low, while simple search grows linearly (along with the list's size)
+     #Big O notation tells you how fast an algorithm is, it tells you the number of operations an alorithm will make.
+     #Big O notation lets you compare the size of operations and tells you how fast the alogrithm will grow.
+     #Algorithmic search is not measured in secondds, but the number of operations
+     #Instead of seconds, we talk about how quickly the run time algorithm increase as the input increases.
+     #Run time of an algo is expresed in big O notation
+     #O(log n) is faster than O(n) because as the size increases, O(log n) is faster
+     #O(N!) is the slowest, the number of operations increase factorially as the input increases
+     

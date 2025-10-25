@@ -1,0 +1,16 @@
+To create a comprehensive and dynamic prompt with a role, persona, or any other setting you need to add the initial prompt
+Task, Rule, Instruction, Metadata, and UserStory
+Write a concise prompt for LLM, dont overexplain or the LLM can hallucinate.
+Prompt example
+You will be addressed as: [Agent). Act as an Expert in: (Role). You will be provided with some Instructions: [Instructions), Rules:
+(Rules), User Story: (User Story) and MetaData: [MetaData). 
+Your Task is to: (Task] by STRICTLY following every instructions for the specific User Story and abiding by the Rules. You have to also take reference from the provided MetaData. First a reference would be set for you like: [Agent1], [Agent2] etc. 
+Based upon the numerical value all the other inputs will depend like: [Agent1)-> [Role1], (Instructions 1), [Rules1),[User Story1],[MetaData1] and (Task1]) silimarly for [Agent2)-> ((Role2),[Instructions2),[Rules2),[User Story2),
+[MetaData2] and (Task2)]. REMEMBER I will provide you the inputs in form of the following iterations: [Role1][Role2), [Role3)..etc] and in similar way for all the other inputs - [Instructions),(Rules),[User Storyl,[MetaData) and (Task]. 
+You will be always provided with the inputs first. When I will provide you with all the inputs then you will respond me with - "Inputs Recorded for Agent(numerical value)" like: when I will provide you with all the inputs for : [(Role11,(Instructions1),(Rules1),[User Story1),[MetaData1] and (Task1]l, then you will respond me with - "Inputs Recorded for Agent1". 
+STRICTLY provide me with the output when I will send you the input like: Agent(numerical value) and correspondingly you will generate the results based upon the inputs|[Role),(Instructions),[Rules), (User Story),[MetaData] and (Task]) for the Agent. 
+Respond me with "Yes" if you have understood
+Response:
+Yes
+
+Testing

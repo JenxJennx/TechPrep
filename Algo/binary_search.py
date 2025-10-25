@@ -16,3 +16,5 @@ def binary_search(arr,item):
     print(binary_search(my_list, 7))   
     print(binary_search(my_list, 3))
     print(binary_search(my_list, 28))
+    print()
+
